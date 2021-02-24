@@ -27,7 +27,6 @@ Spree.ready ($) ->
     Spree.fillCounties = (data, region) ->
       countiesRequired = data.counties_required
       counties = data.counties
-
       countyPara = ($ '#' + region + 'county')
       countySelect = countyPara.find('select')
       countyInput = countyPara.find('input')
@@ -74,9 +73,6 @@ Spree.ready ($) ->
 
     $(document).on 'change', '#scountry select', ->
       Spree.updateCounty 's'
-
-    Spree.updateCounty 'b'
-
 
     window.fillStatesOld = Spree.fillStates
     Spree.fillStates = (data, region) ->
